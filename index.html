@@ -1,9 +1,20 @@
-<!DOCTYPE html>
+-
+
+
+<!D    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><defs><linearGradient id=%22a%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22><stop offset=%220%25%22 stop-color=%22%23ff6b9d%22/><stop offset=%22100%25%22 stop-color=%22%23ffa500%22/></linearGradient></defs><rect width=%22100%22 height=%22100%22 fill=%22%23667eea%22 rx=%2210%22/><rect x=%2235%22 y=%2220%22 width=%2230%22 height=%2240%22 fill=%22url(%23a)%22 rx=%225%22/><rect x=%2245%22 y=%2260%22 width=%2210%22 height=%2230%22 fill=%22%23d4b896%22/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23667eea%22/><rect x=%2230%22 y=%2215%22 width=%2240%22 height=%2250%22 fill=%22%23ff6b9d%22 rx=%228%22/><rect x=%2545%22 y=%2265%22 width=%2210%22 height=%2220%22 fill=%22%23d4b896%22/></svg>">PE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mevi - Pure Fruit Ice Pops</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍦</text></svg>">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAA+xJREFUWIXtl2tsVFUUx39n7sy0nXba6QO6BVpKC7QFSikPQUERBaNRY4xGjfGRGI0xJhqNxkSNRo0xJhqNMdFojImJiYnRaIyJiYmJiYnRaIyJiYnRaIyJiYnRaIyJiYnRaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1GjUaNRo1Gg==">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23667eea%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 text-anchor=%22middle%22>🍦</text></svg>">
+    
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -23,6 +34,26 @@
                     </button>
                 </li>
             </ul>
+            <div class="mobile-header-icons">
+                <button class="cart-icon mobile-cart-header" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-count" id="cartCountMobileHeader">0</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Main menu" aria-expanded="false">
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                    <span class="menu-bar"></span>
+                </button>
+            </div>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#products">Flavors</a>
+                <a href="#contact">Contact</a>
+                <button class="cart-icon mobile-cart" onclick="toggleCart()">
+                    🛒 Cart <span class="cart-count" id="cartCountMobile">0</span>
+                </button>
+            </div>
         </nav>
     </header>
 

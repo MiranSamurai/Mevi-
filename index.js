@@ -52,6 +52,10 @@ function updateCartDisplay() {
     cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
     
     document.getElementById('cartCount').textContent = cartCount;
+    const cartCountMobile = document.getElementById('cartCountMobile');
+    if (cartCountMobile) cartCountMobile.textContent = cartCount;
+    const cartCountMobileHeader = document.getElementById('cartCountMobileHeader');
+    if (cartCountMobileHeader) cartCountMobileHeader.textContent = cartCount;
     document.getElementById('cartTotal').textContent = `Total: ${cartTotal.toFixed(0)} IQD`;
     
     const cartItems = document.getElementById('cartItems');
@@ -182,6 +186,37 @@ function checkout() {
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile nav toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener('click', function() {
+            const willOpen = !mobileNav.classList.contains('open');
+            mobileNav.classList.toggle('open');
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        });
+        
+        // Close mobile nav when a link is clicked
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileNav.classList.remove('open');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close mobile nav when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                mobileNav.classList.remove('open');
+                menuToggle.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    
     // Update copyright year automatically
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
