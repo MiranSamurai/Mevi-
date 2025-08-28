@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevi - Pure Fruit Ice Pops</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">MEVI</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#products">Flavors</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="cart-icon" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Pure Fruit<br>Ice Pops</h1>
+                    <p>Experience the natural sweetness of real fruit in every bite. No added sugar, just pure deliciousness frozen to perfection.</p>
+                    <a href="#products" class="cta-button">Discover Flavors</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="ice-pop"></div>
+                    <div class="ice-pop"></div>
+                    <div class="ice-pop"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Mevi?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🍓</span>
+                    <h3>100% Natural Fruit</h3>
+                    <p>Made with real fruit puree and natural fruit juices. No artificial flavors or colors - just the vibrant taste of nature.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚫</span>
+                    <h3>Zero Added Sugar</h3>
+                    <p>Sweetened naturally by the fruit itself. Perfect for health-conscious families and anyone watching their sugar intake.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">❄️</span>
+                    <h3>Perfectly Frozen</h3>
+                    <p>Our unique freezing process creates the perfect texture - smooth, creamy, and refreshing in every bite.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌱</span>
+                    <h3>All Natural</h3>
+                    <p>No preservatives, no artificial ingredients. Just pure fruit goodness that you can feel good about enjoying.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">👨‍👩‍👧‍👦</span>
+                    <h3>Family Friendly</h3>
+                    <p>Safe and healthy for the whole family. Kids love the taste, parents love the ingredients.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌈</span>
+                    <h3>Variety of Flavors</h3>
+                    <p>From classic strawberry to exotic mango, we have a natural fruit flavor for every taste preference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Flavors</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🍓</div>
+                    <h4>Strawberry Bliss</h4>
+                    <p>Sweet, jao becostries polori.3 welm pemes</p>
+                    <div class="product-price">250 IQD</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Strawberry Bliss', 250, '🍓')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍌</div>
+                    <h4>Banana Cream</h4>
+                    <p>Creamy banana with a hint of natural vanilla</p>
+                    <div class="product-price">250 IQD</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Banana Cream', 250, '🍌')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍑</div>
+                    <h4>Peach Paradise</h4>
+                    <p>Juicy peaches with a velvety smooth finish</p>
+                    <div class="product-price">250 IQD</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Peach Paradise', 250, '�')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🥭</div>
+                    <h4>Qaisi Delight</h4>
+                    <p>Traditional apricot flavor with authentic taste</p>
+                    <div class="product-price">250 IQD</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Qaisi Delight', 250, '🍊')">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍊</div>
+                    <h4>Orange</h4>
+                    <p>Creery turana anh, chint of welrm, walbt</p>
+                    <div class="product-price">250 IQD</div>
+                    <button class="add-to-cart-btn" onclick="addToCart('Banana Cream', 250, '�')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: Miranabd005@gmail.com</p>
+                    <p>Phone: +964 7511762295</p>
+                </div>
+               
+                <div class="footer-section">
+                    <h4>About Mevi</h4>
+                    <p>Crafting the perfect sugar-free fruit ice pops since 2025. Natural, delicious, and guilt-free.</p>
+                </div>
+            </div>
+            <p>&copy; <span id="currentYear">2025</span> Mevi Ice Pops. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" onclick="closeCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-message">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total" id="cartTotal">Total: 0 IQD</div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
